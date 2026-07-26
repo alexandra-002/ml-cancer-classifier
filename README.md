@@ -6,6 +6,14 @@ This project applies computer science and machine learning methods to biological
 
 ---
 
+## Example Run
+
+The complete machine learning pipeline produces model performance metrics and evaluation results.
+
+![Example Output](./images/example_output.png)
+
+---
+
 ## Motivation
 
 This project explores how machine learning can be applied to biological classification problems.
