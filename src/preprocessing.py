@@ -2,16 +2,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 
-def preprocess_data(X, y):
-    """
-    Split and scale dataset.
-
-    Returns:
-        X_train
-        X_test
-        y_train
-        y_test
-    """
+def split_data(X, y):
 
     X_train, X_test, y_train, y_test = train_test_split(
         X,
@@ -21,10 +12,20 @@ def preprocess_data(X, y):
         stratify=y
     )
 
+    return X_train, X_test, y_train, y_test
+
+
+
+def scale_data(X_train, X_test):
+
     scaler = StandardScaler()
 
-    X_train = scaler.fit_transform(X_train)
+    X_train_scaled = scaler.fit_transform(
+        X_train
+    )
 
-    X_test = scaler.transform(X_test)
+    X_test_scaled = scaler.transform(
+        X_test
+    )
 
-    return X_train, X_test, y_train, y_test
+    return X_train_scaled, X_test_scaled

@@ -1,5 +1,5 @@
-Metric,Value
-Accuracy,0.9824561403508771
-Precision,0.9861111111111112
-Recall,0.9861111111111112
-F1 Score,0.9861111111111112
+Model,Accuracy,Precision,Recall,F1_Score
+logistic_regression,0.982,0.986,0.986,0.986
+random_forest,0.956,0.959,0.972,0.966
+logistic_regression,0.982,0.986,0.986,0.986
+random_forest,0.956,0.959,0.972,0.966
