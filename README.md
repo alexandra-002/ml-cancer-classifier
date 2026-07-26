@@ -1,590 +1,307 @@
-\# Machine Learning Cancer Classifier
+# Machine Learning Cancer Classifier
 
+A Python-based machine learning application that classifies breast cancer samples using supervised learning techniques. This project implements a complete machine learning pipeline including data loading, preprocessing, model training, evaluation, visualization, and automated testing.
 
+This project applies computer science and machine learning methods to biological data, combining my background in genetics with my interest in computational biology, data science, and software development.
 
-A Python-based machine learning application that classifies breast cancer samples using supervised learning techniques. The project builds a complete machine learning pipeline including data loading, preprocessing, model training, evaluation, visualization, and automated testing.
+---
 
+## Motivation
 
+This project explores how machine learning can be applied to biological classification problems.
 
-This project applies computer science and machine learning methods to a biological dataset, combining my background in genetics with my interest in computational biology and software development.
+By working with cancer diagnostic data, this project demonstrates practical implementation of:
 
-
-
-\---
-
-
-
-\## Motivation
-
-
-
-This project explores how machine learning can be applied to biological data classification problems.
-
-
-
-By working with cancer diagnostic data, this project demonstrates:
-
-
-
-\- Data preprocessing
-
-\- Machine learning model development
-
-\- Model comparison
-
-\- Performance evaluation
-
-\- Data visualization
-
-\- Automated testing
-
-\- Software organization
-
-
+- Data preprocessing
+- Machine learning model development
+- Model comparison
+- Performance evaluation
+- Data visualization
+- Automated testing
+- Modular software design
 
 This project builds on my genetics background while developing practical skills in Python, machine learning, and data science.
 
+---
 
+## Dataset
 
-\---
-
-
-
-\## Dataset
-
-
-
-This project uses the Breast Cancer Wisconsin Diagnostic Dataset provided through scikit-learn.
-
-
+This project uses the Breast Cancer Wisconsin Diagnostic Dataset provided through `scikit-learn`.
 
 The dataset contains:
 
-
-
-\- 569 patient samples
-
-\- 30 numerical features
-
-\- Binary classification labels
-
-
+- 569 patient samples
+- 30 numerical features
+- Binary classification labels
 
 Classification targets:
 
-
-
-\- `0` = malignant
-
-\- `1` = benign
-
-
+- `0` = malignant
+- `1` = benign
 
 Features describe characteristics of cell nuclei, including:
 
+- Radius
+- Texture
+- Perimeter
+- Area
+- Smoothness
+- Compactness
+- Concavity
+- Symmetry
+- Fractal dimension
 
+---
 
-\- Radius
+## Machine Learning Pipeline
 
-\- Texture
+The project follows a complete machine learning workflow:
 
-\- Perimeter
+1. Load biological dataset
+2. Separate features and classification labels
+3. Split data into training and testing sets
+4. Standardize numerical features
+5. Train classification models
+6. Evaluate model performance
+7. Generate visualizations
+8. Export results
 
-\- Area
+---
 
-\- Smoothness
+## Features
 
-\- Compactness
+- Load and process biological classification data
+- Split data into training and testing sets
+- Standardize numerical features
+- Train multiple machine learning models
+- Compare model performance
+- Calculate evaluation metrics
+- Generate confusion matrices
+- Visualize model comparison
+- Identify important predictive features
+- Export model performance results to CSV
+- Automated testing with pytest
 
-\- Concavity
+---
 
-\- Symmetry
+## Machine Learning Models
 
-\- Fractal dimension
+Two classification models were trained and evaluated.
 
-
-
-\---
-
-
-
-\## Features
-
-
-
-\- Load and process biological classification data
-
-\- Split data into training and testing sets
-
-\- Standardize numerical features
-
-\- Train multiple machine learning models
-
-\- Compare model performance
-
-\- Calculate evaluation metrics
-
-\- Generate confusion matrices
-
-\- Visualize model comparison
-
-\- Identify important predictive features
-
-\- Export model performance results to CSV
-
-\- Automated testing with pytest
-
-
-
-\---
-
-
-
-\## Machine Learning Models
-
-
-
-Two classification models were trained and evaluated:
-
-
-
-\### Logistic Regression
-
-
+### Logistic Regression
 
 A linear classification model used as a baseline approach.
 
-
-
-\### Random Forest
-
-
+### Random Forest
 
 An ensemble learning method that combines multiple decision trees to improve classification performance.
 
+---
 
+## Technologies Used
 
-\---
+- Python 3
+- pandas
+- NumPy
+- scikit-learn
+- matplotlib
+- pytest
+- Git
+- GitHub
 
+---
 
-
-\## Technologies Used
-
-
-
-\- Python 3
-
-\- pandas
-
-\- NumPy
-
-\- scikit-learn
-
-\- matplotlib
-
-\- pytest
-
-\- Git
-
-\- GitHub
-
-
-
-\---
-
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
-
 ml-cancer-classifier/
 
-
-
 ├── images/
-
-│   ├── feature\_importance.png
-
-│   ├── logistic\_regression\_confusion\_matrix.png
-
-│   ├── model\_comparison.png
-
-│   └── random\_forest\_confusion\_matrix.png
-
+│   ├── feature_importance.png
+│   ├── logistic_regression_confusion_matrix.png
+│   ├── model_comparison.png
+│   └── random_forest_confusion_matrix.png
 │
-
 ├── results/
-
-│   └── model\_metrics.csv
-
+│   └── model_metrics.csv
 │
-
 ├── src/
-
-│   ├── data\_loader.py
-
+│   ├── data_loader.py
 │   ├── evaluate.py
-
 │   ├── main.py
-
 │   ├── preprocessing.py
-
-│   ├── save\_results.py
-
+│   ├── save_results.py
 │   ├── train.py
-
 │   └── visualize.py
-
 │
-
 ├── tests/
-
-│   └── test\_pipeline.py
-
+│   └── test_pipeline.py
 │
-
 ├── README.md
-
 ├── requirements.txt
-
 └── .gitignore
-
 ```
 
+---
 
-
-\---
-
-
-
-\## Installation
-
-
+## Installation
 
 Clone the repository:
 
-
-
 ```bash
-
 git clone https://github.com/alexandra-002/ml-cancer-classifier.git
-
 ```
-
-
 
 Navigate into the project:
 
-
-
 ```bash
-
 cd ml-cancer-classifier
-
 ```
-
-
 
 Install dependencies:
 
-
-
 ```bash
-
 pip install -r requirements.txt
-
 ```
 
+---
 
-
-\---
-
-
-
-\## Usage
-
-
+## Usage
 
 Run the complete machine learning pipeline:
 
-
-
 ```bash
-
 py src/main.py
-
 ```
-
-
 
 The program will:
 
-
-
-\- Load the dataset
-
-\- Split data into training and testing sets
-
-\- Scale features
-
-\- Train Logistic Regression and Random Forest models
-
-\- Evaluate model performance
-
-\- Save metrics to CSV
-
-\- Generate visualization outputs
-
-
+- Load the dataset
+- Split data into training and testing sets
+- Scale features
+- Train Logistic Regression and Random Forest models
+- Evaluate model performance
+- Save metrics to CSV
+- Generate visualization outputs
 
 Results are saved to:
 
-
-
 ```text
-
-results/model\_metrics.csv
-
+results/model_metrics.csv
 ```
-
-
 
 Visualizations are saved to:
 
-
-
 ```text
-
 images/
-
 ```
 
+---
 
+## Model Performance
 
-\---
+Models were evaluated using:
 
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
 
-
-\## Model Performance
-
-
-
-The models were evaluated using:
-
-
-
-\- Accuracy
-
-\- Precision
-
-\- Recall
-
-\- F1 Score
-
-\- Confusion Matrix
-
-
-
-Results:
-
-
+Performance results:
 
 | Model | Accuracy | Precision | Recall | F1 Score |
-
 |---|---|---|---|---|
-
 | Logistic Regression | 0.982 | 0.986 | 0.986 | 0.986 |
-
 | Random Forest | 0.956 | 0.959 | 0.972 | 0.966 |
-
-
 
 Logistic Regression achieved the highest overall performance on the test dataset.
 
+---
 
+## Visualizations
 
-\---
+### Model Comparison
 
+![Model Comparison](./images/model_comparison.png)
 
+### Logistic Regression Confusion Matrix
 
-\## Visualizations
+![Logistic Regression Confusion Matrix](./images/logistic_regression_confusion_matrix.png)
 
+### Random Forest Confusion Matrix
 
+![Random Forest Confusion Matrix](./images/random_forest_confusion_matrix.png)
 
-\### Model Comparison
+### Feature Importance
 
+![Feature Importance](./images/feature_importance.png)
 
+---
 
-!\[Model Comparison](images/model\_comparison.png)
-
-
-
-
-
-\### Logistic Regression Confusion Matrix
-
-
-
-!\[Logistic Regression Confusion Matrix](images/logistic\_regression\_confusion\_matrix.png)
-
-
-
-
-
-\### Random Forest Confusion Matrix
-
-
-
-!\[Random Forest Confusion Matrix](images/random\_forest\_confusion\_matrix.png)
-
-
-
-
-
-\### Feature Importance
-
-
-
-!\[Feature Importance](images/feature\_importance.png)
-
-
-
-\---
-
-
-
-\## Running Tests
-
-
+## Running Tests
 
 Run the automated test suite:
 
-
-
 ```bash
-
 py -m pytest
-
 ```
-
-
 
 Example output:
 
-
-
 ```text
-
 ==================== test session starts ====================
-
-
 
 collected 6 items
 
-
-
-tests/test\_pipeline.py ...... \[100%]
-
-
+tests/test_pipeline.py ...... [100%]
 
 6 passed
-
 ```
-
-
 
 Tests verify:
 
+- Dataset loading
+- Data splitting
+- Feature scaling
+- Logistic Regression training
+- Random Forest training
+- Model evaluation
 
+---
 
-\- Dataset loading
-
-\- Data splitting
-
-\- Feature scaling
-
-\- Logistic Regression training
-
-\- Random Forest training
-
-\- Model evaluation
-
-
-
-\---
-
-
-
-\## Future Improvements
-
-
+## Future Improvements
 
 Potential future enhancements include:
 
+- Add additional machine learning models
+- Perform hyperparameter tuning
+- Add cross-validation
+- Add ROC curves and AUC metrics
+- Create a prediction interface for new samples
+- Add biological interpretation of important features
+- Deploy the model using a web application
 
+---
 
-\- Add additional machine learning models
-
-\- Perform hyperparameter tuning
-
-\- Add cross-validation
-
-\- Add ROC curves and AUC metrics
-
-\- Create a prediction interface for new samples
-
-\- Add feature analysis based on biological interpretation
-
-\- Deploy the model using a web application
-
-
-
-\---
-
-
-
-\## Skills Demonstrated
-
-
+## Skills Demonstrated
 
 This project demonstrates:
 
+- Python programming
+- Machine learning workflows
+- Biological data analysis
+- Data preprocessing
+- Model training and evaluation
+- Statistical performance analysis
+- Data visualization
+- Automated testing
+- Modular software design
+- Git version control
+- Technical documentation
 
+---
 
-\- Python programming
+## Author
 
-\- Machine learning workflows
-
-\- Biological data analysis
-
-\- Data preprocessing
-
-\- Model training and evaluation
-
-\- Statistical performance analysis
-
-\- Data visualization
-
-\- Automated testing
-
-\- Modular software design
-
-\- Git version control
-
-\- Technical documentation
-
-
-
-\---
-
-
-
-\## Author
-
-
-
-\*\*Alexandra Sigmon\*\*
-
+**Alexandra Sigmon**
